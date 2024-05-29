@@ -10,11 +10,10 @@ class DrawerUi extends StatelessWidget {
       backgroundColor: Theme.of(context).colorScheme.surface,
       child: Column(
         children: [
-          DrawerHeader(
+          const DrawerHeader(
               child: Icon(
             Icons.music_note,
             size: 40,
-            color: Theme.of(context).colorScheme.inversePrimary,
           )),
           Padding(
             padding: const EdgeInsets.only(left: 12, top: 10),

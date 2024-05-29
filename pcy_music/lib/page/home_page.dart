@@ -10,30 +10,18 @@ class MyHomePape extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const DrawerUi(),
-      backgroundColor: Theme.of(context).colorScheme.surface,
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        centerTitle: true,
-        title: const Text(
-          'P L A Y L I S T',
-          style: TextStyle(
-            fontSize: 16,
+        drawer: const DrawerUi(),
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.primary,
+          centerTitle: true,
+          title: const Text(
+            'P L A Y L I S T',
+            style: TextStyle(
+              fontSize: 16,
+            ),
           ),
         ),
-      ),
-      body: Row(
-        children: [
-          const Text('Dark Mode'),
-          CupertinoSwitch(
-              value:
-                  Provider.of<ThemeProvider>(context, listen: false).isDarkMode,
-              onChanged: (value) {
-                Provider.of<ThemeProvider>(context, listen: false)
-                    .togle_Theme();
-              })
-        ],
-      ),
-    );
+        body: const Text('hello'));
   }
 }
