@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pcy_music/theme/theme_provider.dart';
+import 'package:provider/provider.dart';
 
 class NeoBox extends StatelessWidget {
   final Widget child;
@@ -6,6 +8,7 @@ class NeoBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isdarkmood = Provider.of<ThemeProvider>(context).isDarkMode;
     return Container(
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
@@ -14,10 +17,12 @@ class NeoBox extends StatelessWidget {
         boxShadow: [
           BoxShadow(
               blurRadius: 15,
-              color: Colors.grey.shade500,
+              color: isdarkmood ? Colors.black : Colors.grey.shade500,
               offset: const Offset(4, 4)),
-          const BoxShadow(
-              blurRadius: 15, color: Colors.white, offset: Offset(-4, -4)),
+          BoxShadow(
+              blurRadius: 15,
+              color: isdarkmood ? Colors.grey.shade100 : Colors.white,
+              offset: Offset(-4, -4)),
         ],
       ),
       child: child,
