@@ -24,7 +24,13 @@ class SongsPage extends StatelessWidget {
                         Icon(Icons.menu),
                       ],
                     ),
-                    NeoBox(child: Image.asset('assets/images/img1.jpg'))
+                    NeoBox(
+                        child: ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: Image.asset(
+                              'assets/images/img1.jpg',
+                              fit: BoxFit.fill,
+                            )))
                   ],
                 ),
               )),
