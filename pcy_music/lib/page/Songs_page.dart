@@ -13,7 +13,7 @@ class SongsPage extends StatelessWidget {
           child: Scaffold(
               backgroundColor: Theme.of(context).colorScheme.surface,
               body: Padding(
-                padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
+                padding: const EdgeInsets.only(left: 11, right: 10, top: 10),
                 child: Column(
                   children: [
                     const Row(
