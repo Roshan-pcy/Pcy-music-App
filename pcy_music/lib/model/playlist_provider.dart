@@ -34,4 +34,5 @@ setters
   set setIndex(int index) {
     _currentSongIndex = index;
   }
+  /* audio player*/
 }
