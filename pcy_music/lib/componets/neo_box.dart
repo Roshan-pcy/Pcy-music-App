@@ -9,6 +9,7 @@ class NeoBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool isdarkmood = Provider.of<ThemeProvider>(context).isDarkMode;
+    print("dark mode is ${isdarkmood}");
     return Container(
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
@@ -17,12 +18,14 @@ class NeoBox extends StatelessWidget {
         boxShadow: [
           BoxShadow(
               blurRadius: 15,
-              color: isdarkmood ? Colors.black : Colors.grey.shade500,
+              color: isdarkmood
+                  ? Color.fromARGB(255, 11, 10, 10)
+                  : Colors.grey.shade500,
               offset: const Offset(4, 4)),
           BoxShadow(
               blurRadius: 15,
-              color: isdarkmood ? Colors.grey.shade100 : Colors.white,
-              offset: Offset(-4, -4)),
+              color: isdarkmood ? Colors.grey.shade800 : Colors.white,
+              offset: const Offset(-4, -4)),
         ],
       ),
       child: child,

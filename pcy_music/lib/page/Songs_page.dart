@@ -69,7 +69,7 @@ class SongsPage extends StatelessWidget {
                                           fontWeight: FontWeight.w600),
                                     ),
                                     Text(
-                                      currectSong.songName,
+                                      currectSong.artistName,
                                     )
                                   ],
                                 ),
